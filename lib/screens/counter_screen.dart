@@ -43,25 +43,73 @@ class _CounterScreenState extends State<CounterScreen> {
           
       ),
 
-      floatingActionButton: FloatingActionButton(
+  floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
 
-        backgroundColor: Colors.amber,
+          FloatingActionButton(
 
-        child: const Icon(Icons.add),
+            backgroundColor: Colors.amber,
 
-        onPressed: () {
+            child: const Icon(Icons.exposure_minus_1_rounded),
 
-          counter++;
-
-          setState(() {
             
-          });
 
-        },
+            onPressed: () {
 
+              counter--;
+
+              setState(() {
+                
+              });
+
+            },
+
+          ),
+
+         
+
+          FloatingActionButton(
+
+            backgroundColor: Colors.amber,
+
+            child: const Icon(Icons.restore),
+
+            onPressed: () {
+
+              counter = 0;
+
+              setState(() {
+                
+              });
+
+            },
+
+          ),
+
+
+          FloatingActionButton(
+
+            backgroundColor: Colors.amber,
+
+            child: const Icon(Icons.add),
+
+            onPressed: () {
+
+              counter++;
+
+              setState(() {
+                
+              });
+
+            },
+
+          ),
+        ],
       ),
 
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat
+     
         
     );
 
